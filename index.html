@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Routine schedules recurring Jira workflows with task dependencies, business-day due dates and run history."
+    />
+    <title>Routine | Recurring Workflows for Jira</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: system-ui, sans-serif;
+        color: #172b4d;
+        background: #f6f8fc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      header,
+      main,
+      footer {
+        max-width: 1000px;
+        margin: auto;
+        padding: 28px;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .brand {
+        font-size: 24px;
+        font-weight: 750;
+        text-decoration: none;
+        color: #0c66e4;
+      }
+      nav {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      a {
+        color: #0055cc;
+        text-underline-offset: 3px;
+      }
+      a:focus-visible {
+        outline: 3px solid #0c66e4;
+        outline-offset: 5px;
+      }
+      h1 {
+        font-size: clamp(32px, 6vw, 56px);
+        line-height: 1.1;
+        max-width: 750px;
+      }
+      h2 {
+        font-size: 28px;
+      }
+      h3 {
+        font-size: 19px;
+      }
+      p,
+      li {
+        line-height: 1.7;
+      }
+      section {
+        margin-bottom: 36px;
+        scroll-margin-top: 20px;
+      }
+      .panel {
+        background: white;
+        border: 1px solid #dfe5ef;
+        border-radius: 16px;
+        padding: clamp(20px, 4vw, 40px);
+      }
+      .intro {
+        font-size: 20px;
+        max-width: 780px;
+      }
+      .note {
+        color: #44546f;
+        font-size: 14px;
+      }
+      .review {
+        border-left: 4px solid #e2b203;
+        background: #fff7d6;
+        padding: 12px 18px;
+      }
+      footer {
+        color: #44546f;
+        font-size: 14px;
+      }
+      @media (max-width: 480px) {
+        header,
+        main,
+        footer {
+          padding: 20px;
+        }
+        nav {
+          gap: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#overview">Routine</a>
+      <nav aria-label="Main navigation">
+        <a href="#overview">Overview</a>
+        <a href="#support">Support</a>
+        <a href="#privacy">Privacy</a>
+      </nav>
+    </header>
+    <main>
+      <section id="overview" class="panel">
+        <p class="note">Recurring Workflows for Jira</p>
+        <h1>Make recurring work a repeatable process.</h1>
+        <p class="intro">
+          Schedule Jira workflows with task hierarchies, relative due dates, dependencies, assignee
+          rotations and run history.
+        </p>
+        <ul>
+          <li>
+            Plan daily, weekly, monthly, quarterly, yearly or one-time workflows in your timezone.
+          </li>
+          <li>Apply working days and excluded holiday dates.</li>
+          <li>Connect Jira tasks, owners, dependencies and due dates.</li>
+          <li>
+            Start from an editable template for month-end close, onboarding, access reviews or
+            maintenance.
+          </li>
+          <li>Inspect run history and follow created issues into Jira.</li>
+        </ul>
+        <p>
+          Routine runs on Atlassian Forge without an external application backend. Jira remains the
+          source of truth for projects, users and issues.
+        </p>
+        <p class="note">
+          Scheduled execution is not an exact-to-the-minute guarantee. Available issue types and
+          hierarchies depend on your Jira project. Marketplace availability and pricing will be
+          announced after listing approval.
+        </p>
+      </section>
+      <section id="support" class="panel">
+        <h2>Support</h2>
+        <p>Email <a href="mailto:routine@nonpr1zm.com">routine@nonpr1zm.com</a>.</p>
+        <p>
+          Include your Jira site URL, Routine version, routine and run identifiers, the time and
+          timezone of the problem, and the visible error message. Redact confidential workflow
+          content and personal information. Never send passwords, API tokens or payment details.
+        </p>
+        <h3>Before running again</h3>
+        <p>
+          Check run history first. Another manual run creates another occurrence. If a creation
+          result is uncertain, retain the history and contact support before manually recreating
+          work. Routine may need to reconcile an existing Jira issue.
+        </p>
+        <h3>Project configuration</h3>
+        <p>
+          If a run fails, check project issue types, required fields, app permissions and assignee
+          availability. Pausing stops future scheduled occurrences; existing recovery work and
+          created Jira issues can remain. Deleting a routine removes its Routine data, not its Jira
+          issues.
+        </p>
+        <p class="note">
+          Support is provided by email without a guaranteed response time or service availability
+          commitment.
+        </p>
+      </section>
+      <section id="privacy" class="panel">
+        <h2>Privacy policy</h2>
+        <p class="review">
+          Publication draft, October 4, 2026. Publisher identity and support mailbox handling
+          require owner review before this page is used as the app's published privacy policy.
+        </p>
+        <h3>Data and purpose</h3>
+        <p>
+          Routine processes routine names, workflow summary and description templates, labels,
+          project and issue type references, Jira account identifiers for assignees, schedules,
+          timezones, calendars, dependencies and rotation state. Run records contain configuration
+          snapshots, timestamps, statuses, attempts, issue references and diagnostic errors.
+        </p>
+        <p>
+          Routine reads project, user and issue metadata from Jira and creates issues and dependency
+          links according to the saved workflow. It does not store your Jira password or API token.
+        </p>
+        <h3>Hosting and access</h3>
+        <p>
+          Routine runs on Atlassian Forge with installation-scoped storage. It has no external
+          application backend, advertising service or external analytics integration. App data is
+          not sent to publisher-operated servers. Atlassian supplies hosting and platform services
+          under its own policies.
+        </p>
+        <p>
+          Access to Routine definitions and run history requires the corresponding Jira project
+          permissions. Mutations require additional permissions. Site settings require Jira
+          administration permission. Scheduled execution uses the app's Jira permissions.
+        </p>
+        <h3>Retention and deletion</h3>
+        <p>
+          Completed run history older than 365 days is periodically pruned. Pending and recoverable
+          runs can remain longer. Routine definitions remain until deleted. Deleting a routine
+          removes its stored definition and history but does not delete Jira issues it created.
+          Cleanup occurs in bounded operations and can require subsequent passes.
+        </p>
+        <p>
+          Minimal metadata for deleted routines, consisting of routine UUID, cleanup due time and
+          queue key, remains until installation storage is purged. It supports cleanup of records
+          delayed by storage indexes and contains no workflow text, assignee identifiers or Jira
+          issue references.
+        </p>
+        <p>
+          After uninstall, Atlassian's Forge storage retention and deletion policies apply. Routine
+          has no independent backup service outside Forge.
+        </p>
+        <h3>Diagnostics and support email</h3>
+        <p>
+          Application logs record operational identifiers, statuses, counts and error categories.
+          Workflow text and Jira error content are not intentionally written to production logs. Run
+          records can contain diagnostic messages visible to authorized users.
+        </p>
+        <p>
+          When you contact support, your email and the information you choose to send are processed
+          separately to respond to your request. Email support is outside Atlassian Forge. Do not
+          send secrets or confidential issue content.
+        </p>
+        <h3>Requests</h3>
+        <p>
+          Contact <a href="mailto:routine@nonpr1zm.com">routine@nonpr1zm.com</a> about
+          privacy or information sent to support. Contact your Jira administrator about access and
+          deletion of Jira issues or Routine definitions. Platform account and hosting requests are
+          also subject to Atlassian's policies.
+        </p>
+      </section>
+    </main>
+    <footer>Routine by Oskar Makarov. Jira and Atlassian are trademarks of Atlassian.</footer>
+  </body>
+</html>
