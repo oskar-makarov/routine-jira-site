@@ -113,6 +113,7 @@
       <a class="brand" href="#overview">Routine</a>
       <nav aria-label="Main navigation">
         <a href="#overview">Overview</a>
+        <a href="#documentation">Documentation</a>
         <a href="#support">Support</a>
         <a href="#privacy">Privacy</a>
       </nav>
@@ -145,6 +146,51 @@
           Scheduled execution is not an exact-to-the-minute guarantee. Available issue types and
           hierarchies depend on your Jira project. Marketplace availability and pricing will be
           announced after listing approval.
+        </p>
+      </section>
+      <section id="documentation" class="panel">
+        <h2>Getting started</h2>
+        <ol>
+          <li>
+            Open Apps &gt; Routine in your Jira site. Use a starter template or select New routine.
+          </li>
+          <li>
+            Name the routine and choose a Jira project you can access. Review the editable template
+            rather than activating it unchanged.
+          </li>
+          <li>Choose recurrence, local time, timezone, working days and excluded holiday dates.</li>
+          <li>
+            Add workflow items. Select a supported issue type and enter a summary for each item.
+            Configure parents, assignees or rotations, dependencies and relative due dates as
+            needed.
+          </li>
+          <li>
+            Save a draft, review its validation messages and activate it when ready. Check the next
+            scheduled run time.
+          </li>
+          <li>
+            Use Run now for a deliberate test. Open the run history and verify each created Jira
+            issue. A manual run creates a separate occurrence.
+          </li>
+        </ol>
+        <h3>Scheduling controls</h3>
+        <p>
+          Pause stops future scheduled occurrences. Reschedule changes the next occurrence; the
+          control accepts UTC even though the routine's regular schedule uses its saved timezone.
+          Skip next occurrence marks that occurrence to be recorded as skipped without creating
+          issues when the scheduler processes it. Refresh or reopen the routine to inspect the
+          authoritative state.
+        </p>
+        <h3>Due dates and permissions</h3>
+        <p>
+          Business-day due dates use the configured working calendar. A zero-business-day offset on
+          a non-working day can move to the next working day. Project permissions, supported issue
+          types, required fields and valid assignees must be available for creation.
+        </p>
+        <p>
+          Run records retain created issue references if execution is interrupted or partially
+          succeeds. Inspect those records before trying again. Scheduled processing can occur after
+          the displayed time; the app does not guarantee execution at an exact minute.
         </p>
       </section>
       <section id="support" class="panel">
